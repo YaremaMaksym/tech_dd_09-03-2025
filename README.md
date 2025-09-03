@@ -8,7 +8,8 @@ This project implements a Kotlin app that retrieves forecast for the next day fo
 - [Installation](#installation)
 
 ## Demo
-Demonstration of results:
+Demonstration of the results:\
+<img width="741" height="258" alt="image" src="https://github.com/user-attachments/assets/7f3efc5a-5580-43f8-938a-75ccb87c715c" />
 
 ## Technologies
 
