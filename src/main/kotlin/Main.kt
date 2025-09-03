@@ -11,20 +11,22 @@ fun main() = runBlocking {
 }
 
 fun printForecasts(forecasts: List<Forecast>) {
-    println("-----------------------------------------------------------")
-    println("| Location   | Max °C | Min °C | Humidity % | Wind kph Dir |")
-    println("-----------------------------------------------------------")
+    println("-------------------------------------------------------------------------")
+    println("| Location   | Max °C | Min °C | Humidity | Wind Speed | Wind Direction |")
+    println("-------------------------------------------------------------------------")
     for (f in forecasts) {
+        val humidityStr = "${f.humidity}%"
+        val windKphStr = "${f.windKph} kph"
         println(
-            "| %-10s | %6.1f | %6.1f | %10s | %3s %-7s |".format(
+            "| %-10s | %6.1f | %6.1f | %8s | %10s | %14s |".format(
                 f.locationName,
                 f.maxTempC,
                 f.minTempC,
-                f.humidity,
-                f.windKph,
+                humidityStr,
+                windKphStr,
                 f.windDir
             )
         )
     }
-    println("-----------------------------------------------------------")
+    println("-------------------------------------------------------------------------")
 }

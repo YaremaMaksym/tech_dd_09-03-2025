@@ -37,5 +37,6 @@ data class DaySummary(
 
 @JsonClass(generateAdapter = true)
 data class Hour(
+    @Json(name = "time_epoch") val timeEpoch: Long,
     @Json(name = "wind_dir") val windDir: String?
 )
